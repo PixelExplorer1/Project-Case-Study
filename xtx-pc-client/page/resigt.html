@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/resigt.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper resigt">
+        <img src="../images/logo.png" alt="">
+        <a href="../index.html">进入网站首页<span>&nbsp;&nbsp;>></span></a>
+    </div>
+    <div class="topic">
+        <div class="box">
+            <div class="smallBox">
+                <form action="../index.html">
+                    <span class="one underLine">用户登录</span>
+                    <span class="tow">二维码登录</span><br>
+                    <div class="code">手机验证码登录</div><br>
+                    <div class="username">
+                        <input type="text" placeholder="请输入用户名称/手机号码">
+                    </div>
+                    <div class="passwod">
+                    <input type="password" placeholder="请输入密码">
+                    </div>
+                    <div class="verify">
+                        <input type="checkbox">
+                        <p>我已同意<span>《服务条款》</span>和<span>《服务条款》</span></p>
+                    </div>
+                    <button>登录</button>
+                    <div class="foot">
+                        <span id="one">忘记密码？</span>
+                        <span id="tow">免费注册</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="wrapper">
+            <div class="top">
+                <ul>
+                    <li>
+                        <!-- 通过伪元素添加标签实现精灵图 -->
+                        <span>价格亲民</span>
+                    </li>
+                    <li><span>物流快捷</span></li>
+                    <li><span>品质新鲜</span></li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <p>
+                    <a href="#">关于我们</a> |
+                    <a href="#">帮助中心</a> |
+                    <a href="#">售后服务</a> |
+                    <a href="#">配送与验收</a> |
+                    <a href="#">商务合作</a> |
+                    <a href="#">搜索推荐</a> |
+                    <a href="#">友情链接</a> 
+                </p>
+                <p>
+                    CopyRight @ 小兔鲜儿
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function(){
+            /* 获取按钮和复选框 */
+            let button = document.querySelector('form')
+            let check = document.querySelector('.topic .box .smallBox .verify input')
+            /* 获取账户和密码 */
+            let userName = document.querySelector('.topic .box .smallBox .username input')
+            let passwod = document.querySelector('.topic .box .smallBox .passwod input')
+            button.addEventListener('submit',function(e){
+                if(userName.value === '' || passwod.value === ''){
+                    alert('请输入内容')
+                    return e.preventDefault()
+                }else if(!check.checked){
+                    alert('请先勾选')
+                    return e.preventDefault()
+                }
+                localStorage.setItem('name',`${userName.value}`)
+            })
+        }());
+    </script>
+</body>
+</html>

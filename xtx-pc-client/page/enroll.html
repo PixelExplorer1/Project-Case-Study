@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/enroll.css">
+<!--     <link rel="stylesheet" href="../css/index.css"> -->
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="wrapperEnroll">
+        <div class="navigation">
+            <h1>注册登录</h1>
+        </div>
+        <div class="enrollBody">
+            <form action="../index.html">
+            <div class="username">
+                <input type="text" placeholder="设置用户名称">
+                <p></p>
+            </div>
+            <div class="phone">
+                <input type="text" placeholder="输入手机号码" >
+                <p></p>
+            </div>
+            <div class="verify">
+                <input type="text" placeholder="短信验证码" >
+                <span class="verifyCode">发送验证码</span>
+                <p></p>
+            </div>
+            <div class="passwod">
+                <input type="password" placeholder="设置6至20位字母、数字和符号组合" >
+                <p></p>
+            </div>
+            <div class="verifyPasswod">
+                <input type="password" placeholder="请再次输入上面密码" >
+                <p></p>
+            </div>
+            <!-- 协议 -->
+            <div class="agreement">
+            <input type="checkbox">
+            <span>已阅读并同意<i>《用户服务协议》</i></span>
+            </div>
+            <!-- 提交按钮 -->
+            <div class="sub">
+                <button>下一步</button>
+            </div>
+        </form>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="wrapper">
+            <div class="top">
+                <ul>
+                    <li>
+                        <!-- 通过伪元素添加标签实现精灵图 -->
+                        <span>价格亲民</span>
+                    </li>
+                    <li><span>物流快捷</span></li>
+                    <li><span>品质新鲜</span></li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <p>
+                    <a href="#">关于我们</a> |
+                    <a href="#">帮助中心</a> |
+                    <a href="#">售后服务</a> |
+                    <a href="#">配送与验收</a> |
+                    <a href="#">商务合作</a> |
+                    <a href="#">搜索推荐</a> |
+                    <a href="#">友情链接</a> 
+                </p>
+                <p>
+                    CopyRight @ 小兔鲜儿
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        //验证码
+        (function(){
+            let verify = document.querySelector('.wrapperEnroll .enrollBody form .verify .verifyCode')
+            verify.addEventListener('click',function(e){
+                let num = 5
+                verify.innerHTML = `05重新发送`
+               let time = setInterval(function(){
+                    num--
+                    verify.innerHTML = `0${num}重新发送`
+                    if(num === 0) {
+                        verify.innerHTML = `重新发送`
+                        clearInterval(time)
+                    }
+                },1000)
+            })
+        }());
+        //错误提醒
+        (function(){
+            let username = document.querySelector('.wrapperEnroll .enrollBody form .username')
+            let phone = document.querySelector('.wrapperEnroll .enrollBody form .phone')
+            let verify = document.querySelector('.wrapperEnroll .enrollBody form .verify')
+            let passwod = document.querySelector('.wrapperEnroll .enrollBody form .passwod')
+            let verifyPasswod = document.querySelector('.wrapperEnroll .enrollBody form .verifyPasswod')
+            let check = document.querySelector('.wrapperEnroll .enrollBody form .agreement input')
+            let btn = document.querySelector('.wrapperEnroll .enrollBody form')
+            
+            function verifyUser(){
+                let reg = /^[\w]{6,10}$/
+                if(reg.test(username.children[0].value)){
+                    username.children[1].innerHTML = ''
+                    return true
+                }else{
+                    username.children[1].innerHTML = '昵称长度为6到10个字符'
+                    return false
+                }}
+            function verifyPhone(){
+                let reg = /^1[3|4|5|7|8]\d{9}$/
+                if(reg.test(phone.children[0].value)){
+                    phone.children[1].innerHTML = ''
+                    return true
+                }else{
+                    phone.children[1].innerHTML = '请输入正确的手机号'
+                    return false
+                }}
+            function verifyV(){
+                let reg = /^\d{4}$/
+                if(reg.test(verify.children[0].value)){
+                    verify.children[2].innerHTML = ''
+                    return true
+                }else{
+                    verify.children[2].innerHTML = '请输入正确的验证码'
+                    return false
+                }
+            }
+            function verifyP(){
+                let reg = /^[\w-]{6,20}$/
+                if(reg.test(passwod.children[0].value)){
+                    passwod.children[1].innerHTML = ''
+                    return true
+                }else{
+                    passwod.children[1].innerHTML = '设置6至20位字母、数字和符号组合'
+                    return false
+                }
+            }
+            function verifyPP(){
+                if(verifyPasswod.children[0].value === passwod.children[0].value){
+                    verifyPasswod.children[1].innerHTML = ''
+                    return true
+                }else{
+                    verifyPasswod.children[1].innerHTML = '两次密码不一样'
+                    return false
+                }
+            }
+            
+            username.children[0].addEventListener('change',verifyUser)
+            phone.children[0].addEventListener('change',verifyPhone)
+            verify.children[0].addEventListener('change',verifyV)
+            passwod.children[0].addEventListener('change',verifyP)
+            verifyPasswod.children[0].addEventListener('change',verifyPP)
+
+            btn.addEventListener('submit',function(e){
+                if(!verifyUser()) e.preventDefault()
+                if(!verifyPhone()) e.preventDefault()
+                if(!verifyV()) e.preventDefault()
+                if(!verifyP()) e.preventDefault()
+                if(!verifyPP()) e.preventDefault()
+                if(!check.checked){
+                    alert('请勾选协议')
+                    e.preventDefault()
+                }
+            })
+        }());
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="./css/init.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <style>
+         html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 3.7333vw;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 4.8vw;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="./img/logo.png">
+            <span>加速中心</span>
+        </div>
+        <div class="main">
+            <div class="Lmap">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="./img/01.jpg" alt=""></div>
+                      <div class="swiper-slide"><img src="./img/02.jpg" alt=""></div>
+                      <div class="swiper-slide"><img src="./img/03.jpg" alt=""></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+            </div>
+            <div class="search">
+              <input type="text" placeholder="输入内容" class="inS">
+              <div class="ig"><a href="#"></a></div>
+          </div>
+          <p class="erro"></p>
+            <div>
+                <ul>
+                    <li id="tZ0">
+                        <img src="./img/fire.png" alt="">
+                        <p>穿越火线</p>
+                        <button>加速</button>
+                    </li>
+                    <li id="tZ1">
+                        <img src="./img/wangzhe.png" alt="">
+                        <p>王者荣耀</p>
+                        <button>加速</button>
+                    </li>
+                    <li id="tZ2">
+                        <img src="./img/mihayou.png" alt="">
+                        <p>米哈游</p>
+                        <button>加速</button>
+                    </li>
+                    <li id="tZ3">
+                        <img src="./img/peace.png" alt="">
+                        <p>和平精英</p>
+                        <button>加速</button>
+                    </li>
+                    <li id="tZ4">
+                        <img src="./img/明日方舟.webp" alt="">
+                        <p>明日方舟</p>
+                        <button>加速</button>
+                    </li>
+                    <li id="tZ5">
+                      <img src="./img/深空之眼.webp" alt="">
+                      <p>深空之眼</p>
+                      <button>加速</button>
+                    </li>
+                    <li id="tZ6">
+                      <img src="./img/火影忍者.webp" alt="">
+                      <p>火影忍者</p>
+                      <button>加速</button>
+                    </li>
+                    <li id="tZ7">
+                      <img src="./img/英雄联盟手游.webp" alt="">
+                      <p>英雄联盟手游</p>
+                      <button>加速</button>
+                    </li>
+                    <li id="tZ8">
+                      <img src="./img/部落冲突(腾讯版).webp" alt="">
+                      <p>部落冲突(腾讯版)</p>
+                      <button>加速</button>
+                    </li>
+                    <li id="tZ9">
+                      <img src="./img/金铲铲之战.webp" alt="">
+                      <p>金铲铲之战</p>
+                      <button>加速</button>
+                    </li>
+                    <li id="tZ10">
+                      <img src="./img/三国杀.jpg" alt="">
+                      <p>三国杀</p>
+                      <button>加速</button>
+                  </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="javascript:;">
+                <img src="./img/fast.png" alt="">
+                <p class="current">加速</p>
+            </a>
+            <a href="./game.html">
+                <img src="./img/game.png" alt="">
+                <p>游戏</p>
+            </a>
+            <a href="./location.html">
+                <img src="./img/app.png" alt="">
+                <p>定位</p>
+            </a>
+        </div>
+    </div>
+
+
+
+
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        centeredSlides: true,
+        loop:true,
+        autoplay: {
+          delay: 1000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+        //搜索模块
+        const input = document.querySelector('.inS')
+        const bton = document.querySelector('.ig')
+        const erro = document.querySelector('.erro')
+        const li = document.querySelectorAll('.main ul li')
+        const a = document.querySelector('.main .search .ig a')
+        let arr = []
+        for(let i = 0 ;i<li.length;i++){
+          arr.push(li[i].children[1].innerHTML)
+        }
+        bton.addEventListener('click',function(e){
+          let content = input.value
+          if(input.value == ''){
+            a.href = `#`
+            erro.innerHTML = '搜索不能为空'
+            erro.style.display = 'block'
+          }else if(arr.some(e => e == content)){
+            let index = arr.findIndex(e => e == content)
+            a.href = `#tZ${index}`
+            erro.style.display = 'none'
+          }else{
+            a.href = `#`
+            erro.innerHTML = '加速器不支持该游戏'
+            erro.style.display = 'block'
+          }
+        })
+        //加速变换模块
+        const hasten = document.querySelectorAll('.main ul li button')
+        for(let i=0;i<hasten.length;i++){
+          hasten[i].addEventListener('click',function(e){
+            if(this.classList.contains('button1')){
+              this.classList.remove('button1')
+              this.classList.remove('current1')
+              return
+            }
+            for(let n=0;n<hasten.length;n++){
+              hasten[n].classList.remove('button1')
+              hasten[n].classList.remove('current1')
+            }
+            this.classList.add('button1')
+            this.classList.add('current1')
+          })
+        }
+    </script>
+</body>
+</html>

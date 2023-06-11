@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线客户</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/onLine.css">
+    <script src="../js/jQuery.min.js"></script>
+</head>
+<body>
+
+    <div class="wrapper">
+        <h1>信息发布</h1>
+        <div class="cont">
+            <h2>内容框:</h2>
+            <textarea cols="70" rows="8" class="textCont" placeholder="请输入内容..." maxlength="200"></textarea>
+            <div style="width: 100%;height: 34px;">
+            <button class="bton">发布</button>
+            <p><span>0</span> / 200</p>
+            </div>
+            <div class="contList">
+                <ul>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer">
+        <div class="wrapper">
+            <div class="top">
+                <ul>
+                    <li>
+                        <!-- 通过伪元素添加标签实现精灵图 -->
+                        <span>价格亲民</span>
+                    </li>
+                    <li><span>物流快捷</span></li>
+                    <li><span>品质新鲜</span></li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <p>
+                    <a href="#">关于我们</a> |
+                    <a href="#">帮助中心</a> |
+                    <a href="#">售后服务</a> |
+                    <a href="#">配送与验收</a> |
+                    <a href="#">商务合作</a> |
+                    <a href="#">搜索推荐</a> |
+                    <a href="#">友情链接</a> 
+                </p>
+                <p>
+                    CopyRight @ 小兔鲜儿
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('.textCont').on({
+                input:function(){
+                    $('.cont p span').text($(this).val().length)
+                }
+            })
+            $('.bton').on({
+                click:function(){
+                    $('.cont p span').text(0)
+                    if($('.textCont').val().trim() == ''){
+                        $('.textCont').val('')
+                        return alert('请输入内容!!!')
+                    }
+                    let s = $(`<li>${$('.textCont').val()}<a href="javascript:;">删除</a></li>`)
+                    $('.contList ul').prepend(s)
+                    s.slideDown()
+                    $('.textCont').val('')
+                }
+            })
+            $('.contList ul').on('click','a',function(){
+                $(this).parent().slideUp(function(){
+                    $(this).remove()
+                })
+                
+            })
+        });
+    </script>
+
+</body>
+</html>

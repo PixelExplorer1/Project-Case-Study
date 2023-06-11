@@ -1,0 +1,117 @@
+.resigt{
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.resigt a{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.resigt a span{
+    color: rgb(85,165,150);
+}
+
+.topic{
+    position: relative;
+    background-image: url(../images/resight-background.png);
+    width: 100%;
+    height: 488px;
+}
+
+.topic .box{
+    position: absolute;
+    right: 170px;
+    top: 60px;
+    width: 400px;
+    height: 350px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topic .box .smallBox{
+    width: 350px;
+    height: 300px;
+}
+
+.topic .box .smallBox span{
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.topic .box .smallBox .tow{
+    float: right;
+}
+
+.topic .box .smallBox .code{
+    float: right;
+    color: rgb(85,165,150);
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.topic .box .smallBox .code:hover{
+    border-bottom: 1px solid rgb(85,165,150);
+}
+
+.topic .box .smallBox .username,.topic .box .smallBox .passwod{
+    background-color: #ccc;
+    margin-top: 15px;
+    background-color: #ccc;
+    padding-left:40px ;
+    border: 1px solid rgb(85,165,150);
+}
+
+.topic .box .smallBox .username input,.topic .box .smallBox .passwod input{
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+    padding-left: 15px;
+}
+
+.topic .box .smallBox .verify{
+    margin-top: 20px;
+}
+
+.topic .box .smallBox .verify p{
+    display: inline-block;
+}
+
+.topic .box .smallBox .verify span{
+    font-size: 16px;
+    color: rgb(85,165,150);
+
+}
+
+.topic .box .smallBox button{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(85,165,150);
+    border: none;
+    color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.topic .box .smallBox .foot{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.topic .box .smallBox .foot span{
+    font-size: 16px;
+}
+
+.topic .box .smallBox .foot span:hover{
+    color: rgb(85,165,150);
+}
+
+
+/* 下划线 */
+.underLine{
+    border-bottom: 3px solid rgb(85,165,150);
+}

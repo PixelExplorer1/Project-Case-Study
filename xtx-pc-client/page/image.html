@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="小兔仙儿官网，致力于打造全球最大的食品、生鲜电商购物平台。">
+    <meta name="keywords" content="小兔仙儿，食品，生鲜，服装，家电，电商，购物">
+    <title>小兔仙儿-图片展示</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <script src="../js/jQuery.min.js"></script>
+    <script src="../js/pinterest_grid.js"></script>
+    <style>
+        #gallery-wrapper {
+		position: relative;
+		max-width: 75%;
+		width: 75%;
+		margin:50px auto;
+		}
+		img.thumb {
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+		}
+		.white-panel {
+		position: absolute;
+		background: white;
+		border-radius: 5px;
+		box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+		padding: 10px;
+		}
+		.white-panel h1 {
+		font-size: 1em;
+		}
+		.white-panel h1 a {
+		color: #A92733;
+		}
+		.white-panel:hover {
+		box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+		margin-top: -5px;
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+		}
+    </style>
+</head>
+<body>
+    
+	<section id="gallery-wrapper">
+		<article class="white-panel">
+			<img src="../uploads/01.jpg" class="thumb">
+			<h1><a href="#">第一张图</a></h1>
+	  		<p>京剧</p>
+		</article>
+		<article class="white-panel">
+			<img src="../uploads/001.jpg" class="thumb">
+			<h1><a href="#">第二张图</a></h1>
+	  		<p>刻晴&&七七</p>
+		</article>
+		<article class="white-panel">
+			<img src="../uploads/02.jpg" class="thumb">
+			<h1><a href="#">第三张图</a></h1>
+	  		<p>京剧</p>
+		</article>
+		<article class="white-panel">
+			<img src="../uploads/002.webp" class="thumb">
+			<h1><a href="#">第四张图</a></h1>
+	  		<p>派梦</p>
+		</article>
+		<article class="white-panel">
+			<img src="../uploads/03.jpg" class="thumb">
+			<h1><a href="#">第五张图</a></h1>
+	  		<p>京剧</p>
+		</article>
+		<article class="white-panel">
+			<img src="../uploads/003.jpg" class="thumb">
+			<h1><a href="#">第六张图</a></h1>
+	  		<p>雷神</p>
+		</article>
+		<article class="white-panel">
+			<img src="../uploads/04.jpg" class="thumb">
+			<h1><a href="#">第七张图</a></h1>
+	  		<p>京剧</p>
+		</article>
+		<article class="white-panel">
+			<img src="../uploads/004.jpg" class="thumb">
+			<h1><a href="#">第八张图</a></h1>
+	  		<p>风景</p>
+		</article>
+		<article class="white-panel">
+			<img src="../uploads/05.jpg" class="thumb">
+			<h1><a href="#">第九张图</a></h1>
+	  		<p>京剧</p>
+		</article>
+		<article class="white-panel">
+			<img src="../uploads/005.png" class="thumb">
+			<h1><a href="#">第十张图</a></h1>
+	  		<p>中二少女</p>
+		</article>
+		<article class="white-panel">
+			<img src="../uploads/06.jpg" class="thumb">
+			<h1><a href="#">第十一张图</a></h1>
+	  		<p>京剧</p>
+		</article>
+    </section>
+
+
+
+
+
+
+    <!-- 版权区域 -->
+    <div class="footer">
+        <div class="wrapper">
+            <div class="top">
+                <ul>
+                    <li>
+                        <!-- 通过伪元素添加标签实现精灵图 -->
+                        <span>价格亲民</span>
+                    </li>
+                    <li><span>物流快捷</span></li>
+                    <li><span>品质新鲜</span></li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <p>
+                    <a href="#">关于我们</a> |
+                    <a href="#">帮助中心</a> |
+                    <a href="#">售后服务</a> |
+                    <a href="#">配送与验收</a> |
+                    <a href="#">商务合作</a> |
+                    <a href="#">搜索推荐</a> |
+                    <a href="#">友情链接</a> 
+                </p>
+                <p>
+                    CopyRight @ 小兔鲜儿
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- js区域 -->
+    <script type="text/javascript">
+		$(function(){
+			$("#gallery-wrapper").pinterest_grid({
+				no_columns: 3,
+                padding_x: 10,
+                padding_y: 10,
+                margin_bottom: 50,
+                single_column_breakpoint: 700
+			});
+		});
+	</script>
+</body>
+</html>

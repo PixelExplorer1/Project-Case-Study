@@ -1,0 +1,118 @@
+
+
+.main{
+    flex: 1;
+    overflow: auto;
+}
+
+.main .Lmap{
+    width: 100%;
+}
+
+.main ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-size: 4.2667vw;
+    padding: 2.6667vw;
+}
+
+.main ul li img{
+    width: 21.3333vw;
+    height: 21.3333vw;
+    border-radius: 50%;
+}
+
+.main ul li button{
+    width: 26.6667vw;
+    height: 13.3333vw;
+    background-color: #00b35b;
+    color: #fff;
+    border: none;
+    border-radius: 2.6667vw;
+    font-size: 4.2667vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.main ul li .button1{
+    width: 26.6667vw;
+    height: 13.3333vw;
+    background-color: #00b35b;
+    color: #00b35b;
+    border: none;
+    border-radius: 2.6667vw;
+    font-size: 4.2667vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.main .search{
+    margin:5.3333vw;
+    display: flex;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.main .search input{
+    width: 80vw;
+    outline: none;
+    padding: 1.3333vw;
+    border-radius: 13.3333vw;
+    padding-left: 8vw;
+}
+
+.main .search .ig{
+    width: 8vw;
+    height: 8vw;
+    background-image: url(../img/sprites.png);
+    background-position: -72px -64px;
+    position: absolute;
+    top: 0vw;
+    left: 0vw;
+}
+.main .search .ig a{
+    display: block;
+    width: 8vw;
+    height: 8vw;
+}
+
+
+.erro{
+    color: red;
+    margin-left: 14.1333vw;
+    font-size: 3.7333vw;
+    display: none;
+}
+
+
+.current1::after{
+    content: '加速中· · ·';
+    font-size: 4.2667vw;
+    position: absolute;
+    top: 3.7333vw;
+    left: 4vw;
+    width: 13.0667vw;
+    height: 13.3333vw;
+    color: #fff;
+    white-space: nowrap;
+    overflow:hidden;
+    animation: donghua 1.2s infinite;
+}
+
+@keyframes donghua {
+    0%{
+        width: 13.0667vw;
+    }
+    25%{
+        width: 13.8667vw;
+    }
+    50%{
+        width: 16vw;
+    }
+    100%{
+        width: 18.1333vw;
+    }
+}
+ 

@@ -1,0 +1,341 @@
+/* 放index页面的样式表 */
+.banner{
+    height: 500px;
+    background-color: #f5f5f5;
+}
+
+.banner .wrapper{
+    position: relative;
+    height: 500px;
+    background-color: pink;
+}
+
+/* 侧导航 */
+.banner .aside{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.banner .aside li{
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.banner .aside li:hover{
+    background-color:aquamarine;
+}
+
+.banner .aside a{
+    position: relative;
+    display: block;
+    width: 250px;
+    height: 50px;
+    padding-right: 19px;
+    color: #fff;
+    padding-left: 36px;
+}
+
+.banner .aside a::after{
+    content: '';
+    position: absolute;
+    top: 19px;
+    right: 19px;
+    width: 6px;
+    height: 12px;
+    background-image: url(../images/sprites.png);
+    background-position: -41px -110px;
+}
+
+.banner .aside a span{
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+/* 箭头 */
+.prev,
+.next{
+    position: absolute;
+    top: 228px;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    background-image: url(../images/sprites.png);
+}
+
+.banner .prev{
+    left: 260px;
+    background-position: 12px -61px;
+}
+
+.banner .next{
+    right: 10px;
+    background-position: -24px -61px;
+}
+
+/* 圆点 */
+.banner ol{
+    position: absolute;
+    left: 680px;
+    bottom: 30px;
+    height: 10px;
+}
+
+.banner ol li{
+    cursor: pointer;
+    float: left;
+    margin-right: 24px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.43);
+}
+
+.banner ol .current{
+    background-color: #1fe446;
+}
+
+.banner ol li:hover{
+    background-color: #fff;
+}
+
+/* 新鲜好物 */
+.goods .hd{
+    height: 114px;
+    line-height: 114px;
+}
+
+.goods .hd h2{
+    float: left;
+    font-size: 29px;
+    font-weight: 400;
+    height: 114px;
+}
+
+.goods .hd h2 span{
+    font-size: 16px;
+    color: #999;
+    margin-left: 34px;
+}
+
+.goods .hd a,.fresh .hd .more{
+    float: right;
+    color: #999;
+}
+
+.goods .hd a::after,.fresh .hd .more::after{
+    content: '';
+    margin-left: 13px;
+    display: inline-block;
+    width: 7px;
+    height: 13px;
+    background-image: url(../images/sprites.png);
+    background-position: 0 -110px;
+    vertical-align: middle;
+}
+
+.goods .bd li{
+    position: relative;
+    float: left;
+    width: 304px;
+    height: 405px;
+    background-color: #f0f9f4;
+    margin-right: 8px;
+    text-align: center;
+    transition: 1s;
+}
+
+.goods .bd li:last-child{
+    margin-right: 0;
+}
+
+.goods .bd li img{
+    width: 304px;
+}
+
+.goods .bd li h3{
+    margin-top: 20px;
+    margin-bottom: 6px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.goods .bd li div,.fresh .bd .right ul div{
+    font-size: 17px;
+    color: #9a2e1f;
+}
+
+.goods .bd li div span,.fresh .bd .right ul div span{
+    font-size: 23px;
+}
+
+.goods .bd li b{
+    position: absolute;
+    left: 17px;
+    top: 18px;
+    width: 28px;
+    height: 51px;
+    border: 1px solid #27ba9b;
+    border-radius: 10%;
+    font-size: 18px;
+    color: #27ba9b;
+    font-weight: 400;
+    line-height: 23px;
+}
+.goods .bd li.cr{
+    background-color: #fff;
+}
+
+.goods .bd li div.ct{
+    font-size: 16px;
+    color: #999;
+}
+
+.goods .bd li:hover{
+    box-shadow: 4px 4px 5px #49d2d2;
+}
+
+/* 生鲜 */
+.fresh .hd{
+    height: 96px;
+    line-height: 96px;
+}
+
+.fresh .hd h2{
+    font-size: 29px;
+    font-weight: 400;
+    float: left;
+}
+
+.fresh .hd ul{
+    float: right;
+    margin-right: 58px;
+}
+
+.fresh .hd ul li{
+    float: left;
+}
+
+.fresh .hd ul li a{
+    padding: 2px 7px;
+    /* margin-right: 6px; */
+}
+
+.fresh .hd ul li a:hover{
+    background-color: #27ba9b;
+    color: #fff;
+}
+
+.fresh .bd .left{
+    float: left;
+    width: 240px;
+    height: 610px;
+}
+
+.fresh .bd .right{
+    float: left;
+    width: 1000px;
+    height: 610px;
+}
+
+.fresh .bd .right ul li{
+    margin-left: 8px;
+    float: left;
+    transition: 1s;
+}
+
+.fresh .bd .right ul li:nth-child(-n+4){
+    margin-bottom: 1px;
+}
+
+.fresh .bd .right ul li a{
+    display: inline-block;
+    width: 242px;
+    height: 304px;
+}
+
+.fresh .bd .right ul li a img{
+    width: 184px;
+    margin: 0 29px;
+}
+
+.fresh .bd .right ul li a h3{
+    font-weight: 400;
+    line-height: 1.2;
+    margin-top: 12px;
+    margin-left: 29px;
+    font-size: 16px;
+}
+
+.fresh .bd .right ul div{
+    margin-left: 29px;
+    margin-top: 8px;
+}
+
+.fresh .bd .right ul li:hover{
+    box-shadow: 1px 1px 2px #999;
+}
+
+/* 时钟 */
+.sz{
+    width: 100px;
+    height: 52px;
+    /* background-color: pink; */
+    position: fixed;
+    top: 52px;
+    text-align: center;
+}
+
+.sz .sz1{
+    display: flex;
+    justify-content: space-around;
+}
+
+.sz .szb,.szb1,.szb3{
+    text-align: center;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: #b78e8e;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+/* 电梯导航栏CSS */
+.elevator{
+    position: fixed;
+    top: 200px;
+    left: 30px;
+}
+
+.elevator ul{
+    display: flex;
+    flex-direction: column;
+    background-color: #cdcdcd4d;
+}
+
+.elevator ul li{
+    width: 67px;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #cdcdcd99;
+    cursor: pointer;
+}
+
+.elevator ul li:hover{
+    background-color: red;
+}
+
+.elevator ul .scrollT{
+    display: none;
+}
+
+.bgcr{
+    background-color: red;
+}

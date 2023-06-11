@@ -1,0 +1,89 @@
+.wrapperEnroll{
+    width: 1000px;
+    height: 700px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+.wrapperEnroll .navigation{
+    height: 100px;
+    line-height: 100px;
+    padding-left: 50px;
+}
+
+.wrapperEnroll .navigation h1{
+    font-weight: normal;
+    color: gray;
+}
+
+.wrapperEnroll .enrollBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+.wrapperEnroll .enrollBody form div:nth-child(-n+5) input{
+    width: 300px;
+    height: 30px;
+    padding: 20px 0 20px 30px;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+.wrapperEnroll .enrollBody p{
+    display: block;
+    height: 20px;
+    color: red;
+    line-height: 20px;
+    font-size: 13px;
+}
+
+
+.wrapperEnroll .enrollBody input[type=checkbox]{
+    margin-left: 50px;
+    vertical-align: middle;
+}
+
+/* 协议模块 */
+.wrapperEnroll .enrollBody i{
+    color: aquamarine;
+    cursor: pointer;
+}
+
+/* 验证码 */
+.wrapperEnroll .enrollBody .verify{
+    position: relative;
+}
+
+.wrapperEnroll .enrollBody .verifyCode{
+    color: aquamarine;
+    font-size: 16px;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.wrapperEnroll .enrollBody form .sub{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.wrapperEnroll .enrollBody form .sub button{
+    width: 280px;
+    height: 40px;
+    border-radius: 5px;
+    background-color:aquamarine;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+.wrapperEnroll .enrollBody form .sub button:hover{
+    background-color: aqua;
+}

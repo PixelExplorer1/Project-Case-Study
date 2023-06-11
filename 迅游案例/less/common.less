@@ -1,0 +1,53 @@
+html{
+    height: 100%;
+    body{
+        height: 100%;
+    }
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 2.6667vw;
+    background-color: #011a38;
+    //头部
+    .header{
+        height: 13.3333vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img{
+            width: 42.1333vw;
+            height: 10.6667vw;
+        }
+        span{
+            color: #fff;
+            font-size: 8.5333vw;
+            font-weight: 700;
+        }
+        //尾部
+        .footer{
+            height: 21.3333vw;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            background-color: #011a38;
+            a{
+                flex: 1;
+                text-align: center;
+                color: #fff;
+                img{
+                    border-radius: 50%;
+                    width: 13.3333vw;
+                    height: 13.3333vw;
+                }
+            }
+        }
+    }
+}
+
+//选中字体颜色
+.current{
+    color:#00b35b;
+}

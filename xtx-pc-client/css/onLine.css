@@ -1,0 +1,59 @@
+.cont{
+    width: 900px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 1px solid pink;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.footer{
+    margin-top: 10px;
+}
+
+.cont h2{
+    font-weight: normal;
+    color: rgb(50, 123, 123);
+}
+
+.cont .textCont{
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    resize: none;
+    font-size: 16px;
+}
+
+.cont p{
+    float:right;
+    font-size: 20px;
+}
+
+.cont p span{
+    color: red;
+}
+
+.cont button{
+    float: right;
+    margin-left: 10px;
+}
+
+.cont .contList ul{
+    margin-left: 140px;
+}
+
+.cont .contList ul li{
+    width: 570px;
+    border-bottom: 1px dashed #cdcdcd;
+    padding: 10px;
+    text-align: left;
+    display: none;
+}
+
+.cont .contList ul li a{
+    float: right;
+    color: blue;
+    display: block;
+    margin-left: 10px;
+}
